@@ -1,0 +1,946 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 80%;
+  margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.backgroundcolour {
+  background: #2e256b;   
+}
+
+/* header styles */
+
+.navigation {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navigationfit {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navigationnav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navigationsg .navigationnav {
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navigationsg .navigationnav .link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.navigationsg .navigationfit {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.navigationlogo img {
+  max-height: 50px;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin: auto;
+}
+
+.navigation a {
+  color: white;
+}
+
+.navigation a:hover, 
+.navigation a:focus,
+.navigation a:active,
+.navigation .active a {
+  color: #0000ff;
+}
+
+.navigationnav {
+  margin: auto;
+}
+
+/* footer styles */
+
+footer {
+  color: white;
+  font-size: 0.8rem;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+footer hr {
+  border-color: gray;
+  margin-bottom: 15px;
+}
+
+/* home-banner */
+
+.toppart {
+  background: url(../img/home-banner.jpg);
+  color: white;
+  background-position: center;
+  text-align: center;
+  padding: 7% 0;
+}
+
+.toppart_text {
+  list-style: none;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+}
+
+.toppart_text li {
+  margin: 0 7px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.toppart h2 {
+  font-size: 2rem;
+}
+
+/* login styles */
+
+.loginpart, .signuppart {
+  padding: 6% 0;
+}
+
+.logindetails {
+  box-shadow: 0px 11px 18px 0px hsla(0, 0%, 60%, 0.5);
+  border-radius: 2px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+.logindetails input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.logindetails .btn {
+  margin-right: 20px;
+}
+
+.logindetails h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: gray;
+}
+
+.logindetails .header {
+  border-bottom: 1px solid #cccccc;
+}
+
+.logindetails h5 {
+  text-align: center;
+  color: gray;
+  margin: 15px 0;
+}
+
+input {
+  padding: 10px 20px;
+  line-height: 18px;
+  border: 1px solid #99999980;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.gradient.btn {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 7px;
+  padding: 15px 35px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.pull-right {
+  float: right;
+}
+
+.gradient {
+  background: linear-gradient(to right, #3fcaff, #a4ffb0);  
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+main {
+  min-height: 80vh;
+}
+
+/* signup */
+
+.signuppart .loginpart .btn {
+  margin: 0 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+  color: buttontext;
+}
+
+.signuppart .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.signuppart .options h5 {
+  margin: 0;
+}
+
+.signuppart .options input {
+  width: 20px;
+  margin: 0;
+  margin-left: 15%;
+}
+
+.centertext {
+  text-align: center;
+}
+
+/* homepage */
+
+.homebanner {
+  background: url(../img/home-banner.jpg)
+}
+
+.wrapper {
+  max-width: 80%;
+  margin: auto;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.text {
+  width: 50%;
+  float: right;
+  padding: 100px 0;
+  color: white;
+}
+.text h2 {
+  font-size: 32px;
+}
+
+.text h6 {
+  max-width: 400px;
+}
+
+.text .playbtn {
+  color: black;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #3fcaff, #a4ffb0);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.text .playbutton {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.red {
+  color: red;
+}
+
+.subscribepart {
+  background: linear-gradient(to right, #3fcaff, #a4ffb0);
+  padding: 30px 0;
+}
+
+.subscribepart .wrapper {
+  text-align: center;
+}
+
+.subscribepart .box {
+  display: inline-block;
+  vertical-align: middle;
+  color: #2e256b;
+  margin-right: 10%;
+  text-align: left;
+}
+
+.subscribepart .box p {
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.subscribepart .ipbox {
+  display: inline-block;
+  background: white;
+  padding: 5px 5px 5px 15px;
+  border-radius: 20px;
+  min-width: 35%;
+}
+
+.subscribepart .ipbox input {
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+  width: calc(100% - 109px);
+}
+
+.subscribepart .ipbox button {
+  border: 0;
+  padding: 9px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* about us styles */
+
+.details {
+  padding: 3% 0;
+  color: white;
+  margin: 5% auto;
+}
+
+.details h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.details h5 {
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.details p {
+  line-height: 2;
+}
+
+.details h5::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #3fcaff, #a4ffb0);  
+  left: 0;
+}
+
+.details .box {
+  width: 60%;
+  padding: 0 9%;
+}
+
+.details .dimg {
+  width: 40%;
+  
+}
+
+.details .dimg img {
+  transform: scale(1.2) translateX(8%);
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/*contactus*/
+
+.contactpart {
+  padding: 6% 0;
+}
+
+.pull-left {
+  float: left;
+}
+
+textarea {
+  padding: 10px 20px;
+  line-height: 17px;
+  border: 1px solid #99999980;
+}
+
+.contactpart input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contactpart textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: #999999;
+}
+
+/*buyfromus*/
+
+.productpart {
+  margin-top: 7%;
+}
+
+.productpart h2 {
+  color: #2e256b;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.productpart h2 span {
+  position: absolute;
+  color: skyblue;
+  opacity: 0.1;
+  z-index: -1;
+  transform: scale(1.7) translateY(-12%);
+}
+
+.productdetail {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.productbox {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 15px;
+  color: #555555;
+  display: inline-block;
+  width: calc(33.33% - 41px);
+  max-width: 300px;
+  margin: 0 19px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.productbox .productimg {
+  width: 100%;
+  margin: auto;
+  padding-top: 100%;
+  position: relative;
+}
+
+.productbox .productimg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.productbox .producttext {
+  line-height: 1.6;
+  font-weight: 500;
+  color: #333;
+}
+
+.productbox .producttext span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cartpart .ipbox {
+  min-width: 0;
+  margin-top: 10px;
+}
+
+.cartpart .wrapper {
+  text-align: left;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.fit-div{
+  width: 80%;
+  height: 70%;
+  margin-left: 10%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    margin-top: 55%;
+    width: 70%;
+  }
+}
+
+.cart-align{
+  display: flex;
+  flex-direction: column;
+}
+.cart-img{
+  width:70%;
+}
+
+.qty-cart-btn{
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  border:1px solid grey;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Verdana, Arial, sans-serif;
+  font-size:12px;
+  height: 40px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+  color: white;
+}
+.close-btn{
+  background-color: grey;
+  width: 30%;
+}
+.a2c-btn{
+  background-color: #0099ff;
+  width: 55%;
+}
+
+.qty-btn-flex{
+  display: flex;
+  flex:wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1000px){
+.qty-btn-flex{
+  flex-flow: column;
+}
+.close-btn{
+  width: 50%;
+}
+}
+
+.cont-input{
+  width: 100%;
+}
+
+/*checkout*/
+
+.checkoutpart {
+  margin-top: 40px;
+}
+
+.checkoutpart .logindetails
+  padding: 20px 40px;
+  color: gray;
+}
+
+.checkoutpart .logindetails h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.checkoutpart .btn {
+  margin-top: 20px;
+  margin-right: 0;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  min-width: 150px;
+  padding: 10px 20px;
+  line-height: 18px;
+  color: gray;
+}
+
+.choicewrapper:after {
+  content: "\f078";
+  font-size: 10px;
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 5;
+  transform: translateY(-50%);
+}
+
+.choicewrapper {
+  background-color: #FFF;
+  display: inline-block;
+  position: relative;
+}
+
+.checkoutpart table {
+  width: 100%;
+  text-align: center;
+}
+
+
+.checkoutpart .logindetails > .row > .c-50 {
+  padding: 0 30px;
+}
+
+.checkoutpart table td {
+  padding: 10px;
+}
+
+.checkoutpart table tr.total-row td {
+  border-top: 1px solid #ccc;
+}
+
+
+.checkoutpart table img {
+  max-width: 100px;
+}
+
+.c-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+/* dashboard individual */
+
+.dashboardpart {
+  padding: 20px 0;
+}
+
+.column-25 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.activitycard {
+  color: white;
+  font-size: 14px;
+  background: green;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.activitycard span {
+  display: block;
+}
+
+.activitycard.yellow {
+  background: orange;
+}
+
+.activitycard.blue {
+  background: blue;
+}
+
+.activitycard.lblue {
+  background: skyblue;
+}
+
+.activitycard.black {
+  background: black;
+  color: white;
+}
+
+.activitycard.white {
+  background: white;
+  color: inherit;
+  border: 1px solid #cccccc;
+}
+
+.activitycard.red {
+  background: red;
+}
+
+.activitycard.gray {
+  background: gray;
+}
+
+.activitycard .header {
+  padding: 15px;
+  box-shadow: 0px 1px 2px 0px rgba(204,204,204,1);
+}
+
+.activitycard .content {
+  padding: 15px;
+  line-height: 1.6;
+}
+
+.activitycard .content span {
+  margin-bottom: 10px;
+}
+
+.activitystatus {
+  background: blue;
+  color: white;
+  border: 1px solid #cccccc;
+  margin-bottom: 40px;
+}
+
+.activitystatus.green {
+  background: green;
+}
+
+.activitystatus.orange {
+  background: orange;
+}
+
+.activitystatus.gray {
+  background: gray;
+}
+
+.activitystatus .icon {
+  font-size: 4.5rem;
+  display: inline;
+  line-height: 1;
+  width: 40%;
+}
+
+.activitystatus .content {
+  padding: 15px;
+}
+
+.activitystatus .col-right {
+  text-align: right;
+  padding-right: 30px;
+  width: 60%;
+}
+
+.activitystatus .col-right .digit {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.activitystatus .col-right {
+  white-space: nowrap;
+}
+
+.activitystatus .footer {
+  color: gray;
+  background: white;
+  text-align: right;
+  padding: 15px;
+}
+
+/* conference */
+
+.conferencepart {
+  margin-top: 7%;
+}
+
+.conferencepart h2 {
+  color: #2e256b;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.conferencepart h2 span {
+  position: absolute;
+  color: skyblue;
+  opacity: 0.1;
+  z-index: -1;
+  transform: scale(1.7) translateY(-12%);
+}
+
+.conferencepart table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #555555;
+  margin-top: 40px;
+}
+
+.conferencepart thead {
+  border-bottom: 2px solid #cccccc;
+  text-align: center;
+  font-weight: 700;
+}
+
+.conferencepart table td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+/* settings */
+
+.settingpart {
+  margin-top: 40px;
+}
+
+.settingpart .logindetails {
+  padding: 35px 50px;
+  max-width: 850px;
+}
+
+.settingpart .heading {
+  color: gray;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.settingpart .logindetails .content {
+  padding: 15px 0;
+}
+
+.settingpart .logindetails .content span {
+  font-size: 10px;
+}
+
+.settingpart .logindetails .content .column-left {
+  width: 30%;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.settingpart .logindetails .content .column-left .image-wrap {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.settingpart .logindetails .content .column-left .image-wrap img {
+  transform: scale(1.1);
+}
+
+.settingpart .logindetails .content .column-right {
+  width: 70%;
+  padding-left: 15px;
+  padding-right: 40px;
+}
